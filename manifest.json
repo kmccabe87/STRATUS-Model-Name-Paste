@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "STRATUS Model Name Paste",
+  "version": "0.2.1",
+  "description": "Improves the STRATUS model-deletion confirmation flow with paste support and an optional warning auto-advance.",
+  "permissions": [
+    "storage"
+  ],
+  "action": {
+    "default_title": "STRATUS Model Delete Options",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.gtpstratus.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ]
+}
